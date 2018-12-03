@@ -82,7 +82,7 @@ namespace CustomCheckedListBox
                 Size glyphSize = CheckBoxRenderer.GetGlyphSize(e.Graphics, state);
                 CheckBoxRenderer.DrawCheckBox(e.Graphics, new Point(e.Bounds.X + 1, e.Bounds.Y + 1),
                     new Rectangle(new Point(e.Bounds.X + glyphSize.Width + 3, e.Bounds.Y), new Size(e.Bounds.Width - glyphSize.Width, e.Bounds.Height)),
-                    item.ToString(), this.Font, TextFormatFlags.Left, false, state);
+                      GetItemText(item), this.Font, TextFormatFlags.Left, false, state);
             }
             else
             {
