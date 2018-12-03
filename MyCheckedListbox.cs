@@ -74,7 +74,7 @@ namespace CustomCheckedListBox
             var targetItem = _disabledItems.FirstOrDefault((x) => x.Item.Equals(item));
             if (targetItem != null)
             {
-                CheckBoxState state = state = CheckBoxState.UncheckedDisabled;
+                CheckBoxState state  = CheckBoxState.UncheckedDisabled;
                 if (targetItem.Checked)
                 {
                     state = CheckBoxState.CheckedDisabled;
