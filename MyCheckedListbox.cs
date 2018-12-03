@@ -10,11 +10,11 @@ using System.Windows.Forms.VisualStyles;
 
 namespace CustomCheckedListBox
 {
-    public class MyCheckedListbox : CheckedListBox
+    public class MyCheckedListBox : CheckedListBox
     {
         private List<DisabledItem> _disabledItems;
 
-        public MyCheckedListbox()
+        public MyCheckedListBox()
         {
             _disabledItems = new List<DisabledItem>();
 

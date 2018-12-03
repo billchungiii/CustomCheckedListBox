@@ -12,11 +12,11 @@ namespace CustomCheckedListBox
 {
     public partial class Form1 : Form
     {
-        MyCheckedListbox boxes;
+        MyCheckedListBox boxes;
         public Form1()
         {
             InitializeComponent();
-            boxes = new MyCheckedListbox();
+            boxes = new MyCheckedListBox();
             for (int i = 0; i < 10; i++)
             {
                 boxes.Items.Add($"A0{i}");
