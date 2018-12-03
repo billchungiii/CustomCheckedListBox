@@ -35,7 +35,7 @@ namespace CustomCheckedListBox
             if (!Items.Contains(item))
             { throw new ArgumentException(); }
 
-            var targetItem = _disabledItems.FirstOrDefault((x) => x.Item == item);
+            var targetItem = _disabledItems.FirstOrDefault((x) => x.Item.Equals(item));
             if (enabled)
             {
                 RemoveDisabledItem(targetItem);
@@ -74,7 +74,7 @@ namespace CustomCheckedListBox
             var targetItem = _disabledItems.FirstOrDefault((x) => x.Item.Equals(item));
             if (targetItem != null)
             {
-                CheckBoxState state  = CheckBoxState.UncheckedDisabled;
+                CheckBoxState state = CheckBoxState.UncheckedDisabled;
                 if (targetItem.Checked)
                 {
                     state = CheckBoxState.CheckedDisabled;
