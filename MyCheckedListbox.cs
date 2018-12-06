@@ -12,7 +12,7 @@ namespace CustomCheckedListBox
 {
     public class MyCheckedListBox : CheckedListBox
     {
-        private List<DisabledItem> _disabledItems;
+        private readonly List<DisabledItem> _disabledItems;
 
         public MyCheckedListBox()
         {
