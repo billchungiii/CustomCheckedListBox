@@ -74,6 +74,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoxesCreator.cs" />
+    <Compile Include="ByIndex.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ByIndex.Designer.cs">
+      <DependentUpon>ByIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ByItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ByItem.Designer.cs">
+      <DependentUpon>ByItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataCreator.cs" />
+    <Compile Include="DataSourceByIndex.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataSourceByIndex.Designer.cs">
+      <DependentUpon>DataSourceByIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSourceByItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataSourceByItem.Designer.cs">
+      <DependentUpon>DataSourceByItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +111,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ByIndex.resx">
+      <DependentUpon>ByIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ByItem.resx">
+      <DependentUpon>ByItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataSourceByIndex.resx">
+      <DependentUpon>DataSourceByIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataSourceByItem.resx">
+      <DependentUpon>DataSourceByItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

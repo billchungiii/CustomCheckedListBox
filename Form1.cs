@@ -12,39 +12,37 @@ namespace CustomCheckedListBox
 {
     public partial class Form1 : Form
     {
-        MyCheckedListBox boxes;
+       
         public Form1()
         {
             InitializeComponent();
-            boxes = new MyCheckedListBox();
-            for (int i = 0; i < 10; i++)
-            {
-                boxes.Items.Add($"A0{i}");
-            }
-
-            panel2.Controls.Add(boxes);
-            boxes.Dock = DockStyle.Fill; 
+          
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            boxes.SetVisualState(2, false);
+            panel2.Controls.Clear();
+            panel2.Controls.Add(new ByIndex() { Dock = DockStyle.Fill });  
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            boxes.SetVisualState(2, true);
+            panel2.Controls.Clear();
+            panel2.Controls.Add(new ByItem() { Dock = DockStyle.Fill });
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            boxes.SetVisualState("A08", false);
-        }
+      
 
         private void button4_Click(object sender, EventArgs e)
         {
-            boxes.SetVisualState("A08", true);
+            panel2.Controls.Clear();
+            panel2.Controls.Add(new DataSourceByIndex() { Dock = DockStyle.Fill });
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            panel2.Controls.Clear();
+            panel2.Controls.Add(new DataSourceByItem() { Dock = DockStyle.Fill });
         }
     }
 }

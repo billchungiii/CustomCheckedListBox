@@ -32,10 +32,12 @@ namespace CustomCheckedListBox
 
         public void SetVisualState(object item, bool enabled)
         {
-            if (!Items.Contains(item))
-            { throw new ArgumentException(); }
-
             var targetItem = _disabledItems.FirstOrDefault((x) => x.Item.Equals(item));
+            RefreshItems(item, enabled, targetItem);
+        }
+
+        private void RefreshItems(object item, bool enabled, DisabledItem targetItem)
+        {
             if (enabled)
             {
                 RemoveDisabledItem(targetItem);
@@ -45,9 +47,7 @@ namespace CustomCheckedListBox
             {
                 AddDisabledItem(item, targetItem);
             }
-
             this.Refresh();
-
         }
 
         private void AddDisabledItem(object item, DisabledItem targetItem)
