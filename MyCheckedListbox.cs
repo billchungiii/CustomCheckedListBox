@@ -41,7 +41,6 @@ namespace CustomCheckedListBox
             if (enabled)
             {
                 RemoveDisabledItem(targetItem);
-
             }
             else
             {
